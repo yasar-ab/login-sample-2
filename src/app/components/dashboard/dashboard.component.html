@@ -1,0 +1,10 @@
+
+<app-side-nav (DashboardEmitter)="menuType($event)"></app-side-nav>
+<div  [ngClass]="menuTypeBoolean ? 'content' : 'content-left'">
+    <mat-card>
+      <button class="new-employeer" mat-raised-button (click)="openFormDialog()">Create Employee</button>
+      <div class="list-table-wrapper">
+        <app-list-table [allEmployeeData]="allEmployeeData"></app-list-table>
+      </div>
+    </mat-card>
+</div>
